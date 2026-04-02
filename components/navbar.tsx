@@ -1,7 +1,8 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Menu, X, TreePine } from "lucide-react"
+import { Menu, X } from "lucide-react"
+import Image from "next/image"
 
 const navLinks = [
   { id: "o-nas", label: "O nás" },
@@ -63,9 +64,14 @@ export default function Navbar() {
               className="flex items-center gap-2 group"
               aria-label="Domov"
             >
-              <div className="w-8 h-8 rounded-lg bg-sky-500/20 flex items-center justify-center group-hover:bg-sky-500/30 transition-colors">
-                <TreePine className="w-4 h-4 text-sky-400" />
-              </div>
+              <Image
+                src="/gromanka-logo.png"
+                alt="Gromanka logo"
+                width={32}
+                height={32}
+                className="rounded-lg"
+                priority
+              />
               <span className="text-xl font-bold text-white group-hover:text-sky-300 transition-colors">
                 Gromanka
               </span>

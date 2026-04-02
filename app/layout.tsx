@@ -6,11 +6,19 @@ export const metadata = {
   title: "O.Z. Gromanka - Občianske združenie Hrabkov",
   description: "Občianske združenie zamerané na rozvoj obce Hrabkov a ochranu jej prírodného bohatstva.",
   keywords: "Gromanka, Hrabkov, občianske združenie, Košice, Šariš, kultúra, príroda",
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+  },
   openGraph: {
     title: "O.Z. Gromanka - Občianske združenie Hrabkov",
     description: "Občianske združenie zamerané na rozvoj obce Hrabkov a ochranu jej prírodného bohatstva.",
     type: "website",
     locale: "sk_SK",
+    images: [{ url: "/gromanka-logo.png", width: 512, height: 512, alt: "Gromanka logo" }],
   },
 }
 

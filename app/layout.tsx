@@ -18,7 +18,7 @@ export const metadata = {
     description: "Občianske združenie zamerané na rozvoj obce Hrabkov a ochranu jej prírodného bohatstva.",
     type: "website",
     locale: "sk_SK",
-    images: [{ url: "/gromanka-logo.png", width: 512, height: 512, alt: "Gromanka logo" }],
+    images: [{ url: "/gromanka-logo.png", width: 1024, height: 1024, alt: "Gromanka logo" }],
   },
 }
 

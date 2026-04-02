@@ -64,14 +64,16 @@ export default function Navbar() {
               className="flex items-center gap-2 group"
               aria-label="Domov"
             >
-              <Image
-                src="/gromanka-logo.png"
-                alt="Gromanka logo"
-                width={32}
-                height={32}
-                className="rounded-lg"
-                priority
-              />
+              <div className="bg-white rounded-xl p-1 shadow-md group-hover:shadow-sky-400/30 transition-shadow">
+                <Image
+                  src="/favicon-32x32.png"
+                  alt="Gromanka logo"
+                  width={36}
+                  height={36}
+                  className="block"
+                  priority
+                />
+              </div>
               <span className="text-xl font-bold text-white group-hover:text-sky-300 transition-colors">
                 Gromanka
               </span>

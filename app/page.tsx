@@ -82,6 +82,18 @@ export default function HomePage() {
 
         <div className="relative z-10 container mx-auto px-4 sm:px-6 py-20">
           <div className="max-w-3xl">
+            {/* Logo */}
+            <div className="mb-6 animate-fade-in">
+              <Image
+                src="/gromanka-logo.png"
+                alt="Gromanka logo"
+                width={220}
+                height={220}
+                className="rounded-2xl shadow-2xl shadow-blue-950/40 bg-white"
+                priority
+              />
+            </div>
+
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-sky-500/20 border border-sky-400/30 rounded-full text-sky-300 text-sm font-medium mb-6 animate-fade-in">
               <TreePine size={14} />

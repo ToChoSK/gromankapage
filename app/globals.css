@@ -114,6 +114,11 @@
   50% { opacity: 0.6; }
 }
 
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
 @keyframes bounce-subtle {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-8px); }
@@ -166,6 +171,9 @@ html {
     animation: pulse-slow 4s ease-in-out infinite;
   }
 
+  .animate-spin-slow {
+    animation: spin-slow 14s linear infinite;
+  }
   .animate-bounce-subtle {
     animation: bounce-subtle 2s ease-in-out infinite;
   }

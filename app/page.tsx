@@ -83,15 +83,25 @@ export default function HomePage() {
         <div className="relative z-10 container mx-auto px-4 sm:px-6 py-20">
           <div className="max-w-3xl">
             {/* Logo */}
-            <div className="mb-6 animate-fade-in">
-              <Image
-                src="/gromanka-logo.png"
-                alt="Gromanka logo"
-                width={220}
-                height={220}
-                className="rounded-2xl shadow-2xl shadow-blue-950/40 bg-white"
-                priority
-              />
+            <div className="mb-8 animate-fade-in">
+              <div className="relative inline-flex items-center justify-center">
+                {/* Outer dashed spinning ring */}
+                <div className="absolute w-56 h-56 rounded-full border-2 border-dashed border-sky-400/40 animate-spin-slow" />
+                {/* Counter-spinning inner ring */}
+                <div className="absolute w-44 h-44 rounded-full border border-sky-300/30 animate-spin-slow" style={{ animationDirection: "reverse", animationDuration: "20s" }} />
+                {/* Glow halo */}
+                <div className="absolute w-40 h-40 rounded-full bg-sky-500/20 blur-2xl animate-pulse-slow" />
+                {/* Logo circle */}
+                <div className="relative w-36 h-36 rounded-full overflow-hidden bg-white shadow-2xl shadow-sky-500/50 ring-4 ring-white/30 animate-float">
+                  <Image
+                    src="/logoG.png"
+                    alt="Gromanka logo"
+                    fill
+                    className="object-contain p-1"
+                    priority
+                  />
+                </div>
+              </div>
             </div>
 
             {/* Badge */}

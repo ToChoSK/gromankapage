@@ -66,11 +66,11 @@ export default function Navbar() {
             >
               <div className="bg-white rounded-xl p-1 shadow-md group-hover:shadow-sky-400/30 transition-shadow">
                 <Image
-                  src="/favicon-32x32.png"
+                  src="/logoG.png"
                   alt="Gromanka logo"
                   width={36}
                   height={36}
-                  className="block"
+                  className="block rounded-lg"
                   priority
                 />
               </div>

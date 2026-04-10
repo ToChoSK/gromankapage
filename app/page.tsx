@@ -88,7 +88,7 @@ export default function HomePage() {
                 {/* Outer dashed spinning ring */}
                 <div className="absolute w-56 h-56 rounded-full border-2 border-dashed border-sky-400/40 animate-spin-slow" />
                 {/* Counter-spinning inner ring */}
-                <div className="absolute w-44 h-44 rounded-full border border-sky-300/30 animate-spin-slow" style={{ animationDirection: "reverse", animationDuration: "20s" }} />
+                <div className="absolute w-44 h-44 rounded-full border border-sky-300/30 animate-spin-slow-reverse" />
                 {/* Glow halo */}
                 <div className="absolute w-40 h-40 rounded-full bg-sky-500/20 blur-2xl animate-pulse-slow" />
                 {/* Logo circle */}

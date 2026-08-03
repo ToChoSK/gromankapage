@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import { usePathname, useRouter } from "next/navigation"
 import { Menu, X, TreePine } from "lucide-react"
 
 const navLinks = [
@@ -12,14 +13,23 @@ const navLinks = [
   { id: "clenstvo", label: "Členstvo" },
 ]
 
+const NAV_OFFSET = 64
+
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const [activeSection, setActiveSection] = useState("home")
 
+  const pathname = usePathname()
+  const router = useRouter()
+  // Sekcie existujú iba na úvodnej stránke; na podstránkach treba najprv navigovať.
+  const isHome = pathname === "/"
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20)
+
+      if (!isHome) return
 
       // Track active section
       const sections = ["home", "o-nas", "predseda", "hrabkov", "aktivity", "galeria", "clenstvo", "kontakt"]
@@ -32,17 +42,34 @@ export default function Navbar() {
       }
     }
 
+    handleScroll()
     window.addEventListener("scroll", handleScroll, { passive: true })
     return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+  }, [isHome])
+
+  // Príchod z podstránky cez /#sekcia — prehliadač by doskrolloval pod pevný navbar,
+  // preto to dorovnáme sami o jeho výšku.
+  useEffect(() => {
+    if (!isHome || !window.location.hash) return
+    const id = window.location.hash.slice(1)
+    const el = document.getElementById(id)
+    if (!el) return
+    const top = el.getBoundingClientRect().top + window.scrollY - NAV_OFFSET
+    window.scrollTo({ top, behavior: "smooth" })
+  }, [isHome])
 
   const scrollToSection = (sectionId: string) => {
+    setIsMenuOpen(false)
+
+    if (!isHome) {
+      router.push(sectionId === "home" ? "/" : `/#${sectionId}`)
+      return
+    }
+
     const element = document.getElementById(sectionId)
     if (element) {
-      const offset = 64
-      const top = element.getBoundingClientRect().top + window.scrollY - offset
+      const top = element.getBoundingClientRect().top + window.scrollY - NAV_OFFSET
       window.scrollTo({ top, behavior: "smooth" })
-      setIsMenuOpen(false)
     }
   }
 
@@ -50,7 +77,9 @@ export default function Navbar() {
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          isScrolled
+          // Priesvitný navbar funguje len nad tmavým hero úvodnej stránky.
+          // Na podstránkach by biely text zanikol, preto je tam vždy plný.
+          isScrolled || !isHome
             ? "bg-blue-950/95 backdrop-blur-md shadow-lg shadow-blue-950/20"
             : "bg-gradient-to-b from-blue-950/80 to-transparent"
         }`}

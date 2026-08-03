@@ -4,6 +4,13 @@
   "name": "gromanka",
   "compatibility_date": "2025-01-01",
   "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  // OpenNext očakáva, že Next beží v minimal mode — smerovanie a middleware rieši
+  // wrapper, nie samotný Next. Bez toho `NextNodeServer.getMiddlewareManifest`
+  // spadne na dynamickom require `.next/server/middleware-manifest.json`, ktorý
+  // workerd nepodporuje, a worker vráti 500 na každej stránke.
+  "vars": {
+    "NEXT_PRIVATE_MINIMAL_MODE": "1"
+  },
   "assets": {
     "directory": ".open-next/assets",
     "binding": "ASSETS"

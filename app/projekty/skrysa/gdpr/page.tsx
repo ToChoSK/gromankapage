@@ -1,15 +1,5 @@
 import SkrysaGdpr, { GDPR_URL } from "@/components/skrysa-gdpr"
 
-/**
- * Pôvodná adresa zásad ochrany súkromia Skrýše.
- *
- * Túto cestu nemazať a nepresmerovávať — je zverejnená (workers.dev, staršie
- * zdieľané odkazy) a Google vyžaduje, aby zásady ostali trvalo dostupné, takže
- * musí vracať priamo obsah, nie 3xx. Vykresľuje ten istý komponent ako nová
- * adresa; `canonical` ukazuje na ňu, aby z toho vyhľadávače nemali dva
- * konkurenčné záznamy o tom istom dokumente.
- */
-
 export const metadata = {
   title: "Ochrana súkromia — Skrýša",
   description:
@@ -25,6 +15,6 @@ export const metadata = {
   },
 }
 
-export default function OchranaSukromiaSkrysaStaraAdresa() {
+export default function OchranaSukromiaSkrysa() {
   return <SkrysaGdpr />
 }

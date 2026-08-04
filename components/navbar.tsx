@@ -4,11 +4,16 @@ import { useState, useEffect } from "react"
 import { usePathname, useRouter } from "next/navigation"
 import { Menu, X, TreePine } from "lucide-react"
 
-const navLinks = [
+/**
+ * Položka bez `href` je sekcia úvodnej stránky (skroluje sa k nej), položka
+ * s `href` je samostatná podstránka (naviguje sa na ňu).
+ */
+const navLinks: { id: string; label: string; href?: string }[] = [
   { id: "o-nas", label: "O nás" },
   { id: "predseda", label: "Predseda" },
   { id: "hrabkov", label: "Hrabkov" },
   { id: "aktivity", label: "Aktivity" },
+  { id: "projekty", label: "Projekty", href: "/projekty" },
   { id: "galeria", label: "Galéria" },
   { id: "clenstvo", label: "Členstvo" },
 ]
@@ -73,6 +78,20 @@ export default function Navbar() {
     }
   }
 
+  const handleNavClick = (link: { id: string; href?: string }) => {
+    if (!link.href) {
+      scrollToSection(link.id)
+      return
+    }
+    setIsMenuOpen(false)
+    router.push(link.href)
+  }
+
+  // Sekcia je aktívna podľa skrolovania, podstránka podľa adresy — vrátane
+  // hlbších ciest, nech ostane zvýraznená aj na `/projekty/skrysa`.
+  const isActive = (link: { id: string; href?: string }) =>
+    link.href ? pathname.startsWith(link.href) : isHome && activeSection === link.id
+
   return (
     <>
       <header
@@ -105,9 +124,9 @@ export default function Navbar() {
               {navLinks.map((link) => (
                 <button
                   key={link.id}
-                  onClick={() => scrollToSection(link.id)}
+                  onClick={() => handleNavClick(link)}
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
-                    activeSection === link.id
+                    isActive(link)
                       ? "text-white bg-white/10"
                       : "text-white/70 hover:text-white hover:bg-white/5"
                   }`}
@@ -161,9 +180,9 @@ export default function Navbar() {
             {navLinks.map((link) => (
               <button
                 key={link.id}
-                onClick={() => scrollToSection(link.id)}
+                onClick={() => handleNavClick(link)}
                 className={`w-full text-left px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200 ${
-                  activeSection === link.id
+                  isActive(link)
                     ? "text-white bg-white/10"
                     : "text-white/70 hover:text-white hover:bg-white/5"
                 }`}

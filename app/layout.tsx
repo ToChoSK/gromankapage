@@ -3,6 +3,10 @@ import './globals.css'
 import ClientLayout from "./ClientLayout"
 
 export const metadata = {
+  // Bez `metadataBase` by Next vygeneroval kanonické odkazy ako relatívne cesty.
+  // Zásady ochrany súkromia Skrýše kontroluje Google Play, preto tam chceme
+  // absolútnu adresu, ktorá jednoznačne ukazuje na produkčnú doménu.
+  metadataBase: new URL("https://www.gromanka.eu"),
   title: "O.Z. Gromanka - Občianske združenie Hrabkov",
   description: "Občianske združenie zamerané na rozvoj obce Hrabkov a ochranu jej prírodného bohatstva.",
   keywords: "Gromanka, Hrabkov, občianske združenie, Košice, Šariš, kultúra, príroda",

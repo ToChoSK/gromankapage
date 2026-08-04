@@ -1,6 +1,7 @@
 "use client"
 
 import Image from "next/image"
+import Link from "next/link"
 import { useState, useRef } from "react"
 import {
   Info,
@@ -782,16 +783,26 @@ export default function HomePage() {
                   { id: "predseda", label: "Predseda" },
                   { id: "hrabkov", label: "Obec Hrabkov" },
                   { id: "aktivity", label: "Naše aktivity" },
+                  { id: "projekty", label: "Projekty", href: "/projekty" },
                   { id: "galeria", label: "Galéria" },
                   { id: "clenstvo", label: "Členstvo" },
-                ].map(({ id, label }) => (
+                ].map(({ id, label, href }: { id: string; label: string; href?: string }) => (
                   <li key={id}>
-                    <button
-                      onClick={() => scrollToSection(id)}
-                      className="text-white/60 hover:text-sky-400 text-sm transition-colors"
-                    >
-                      {label}
-                    </button>
+                    {href ? (
+                      <Link
+                        href={href}
+                        className="text-white/60 hover:text-sky-400 text-sm transition-colors"
+                      >
+                        {label}
+                      </Link>
+                    ) : (
+                      <button
+                        onClick={() => scrollToSection(id)}
+                        className="text-white/60 hover:text-sky-400 text-sm transition-colors"
+                      >
+                        {label}
+                      </button>
+                    )}
                   </li>
                 ))}
               </ul>

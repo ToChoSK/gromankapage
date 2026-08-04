@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react"
 import { usePathname, useRouter } from "next/navigation"
-import { Menu, X, TreePine } from "lucide-react"
+import { Menu, X } from "lucide-react"
+import Image from "next/image"
 
 /**
  * Položka bez `href` je sekcia úvodnej stránky (skroluje sa k nej), položka
@@ -111,8 +112,15 @@ export default function Navbar() {
               className="flex items-center gap-2 group"
               aria-label="Domov"
             >
-              <div className="w-8 h-8 rounded-lg bg-sky-500/20 flex items-center justify-center group-hover:bg-sky-500/30 transition-colors">
-                <TreePine className="w-4 h-4 text-sky-400" />
+              <div className="bg-white rounded-xl p-1 shadow-md group-hover:shadow-sky-400/30 transition-shadow">
+                <Image
+                  src="/logoG.png"
+                  alt="Gromanka logo"
+                  width={36}
+                  height={36}
+                  className="block rounded-lg"
+                  priority
+                />
               </div>
               <span className="text-xl font-bold text-white group-hover:text-sky-300 transition-colors">
                 Gromanka

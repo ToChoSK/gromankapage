@@ -13,15 +13,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      # pnpm je zamerne pripnute na major verziu, nie na `latest`. S `latest` sa
+      # deploy rozbil sam od seba: pnpm 11 zacal vyzadovat Node >= 22.13, kym tu
+      # bol pripnuty Node 20, a kazdy push do main padol uz pri instalacii.
+      # Verzia 10 sedi s `lockfileVersion: 9.0` v pnpm-lock.yaml.
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
         with:
-          version: latest
+          version: 10
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
           cache: 'pnpm'
 
       - name: Install dependencies

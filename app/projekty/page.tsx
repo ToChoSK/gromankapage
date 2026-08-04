@@ -134,11 +134,11 @@ export default function ProjektyPage() {
                   o kraj zaujímajú, ozvi sa. Radi pomôžeme alebo sa pridáme.
                 </p>
                 <a
-                  href="mailto:chovancak@gromanka.eu"
+                  href="mailto:zdruzenie@gromanka.eu"
                   className="inline-flex items-center gap-2 px-5 py-3 bg-sky-500 hover:bg-sky-400 text-white font-semibold rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-sky-500/30 hover:-translate-y-0.5"
                 >
                   <Mail className="w-4 h-4" aria-hidden="true" />
-                  chovancak@gromanka.eu
+                  zdruzenie@gromanka.eu
                 </a>
               </div>
             </div>

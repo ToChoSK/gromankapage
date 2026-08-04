@@ -201,7 +201,7 @@ gromankapage/
 ## Kontakt
 
 **O.Z. Gromanka**  
-Email: chovancak@gromanka.eu  
+Email: zdruzenie@gromanka.eu  
 Telefón: 0917 917 384  
 Adresa: Napájadlá 5, 2277/5, 040 22, Košice  
 Web: [gromanka.eu](https://gromanka.eu)

@@ -236,11 +236,11 @@ export default function HomePage() {
               {/* Contact info */}
               <div className="flex flex-col sm:flex-row gap-3 mb-8">
                 <a
-                  href="mailto:chovancak@gromanka.eu"
+                  href="mailto:zdruzenie@gromanka.eu"
                   className="flex items-center gap-2 px-4 py-2.5 bg-sky-50 hover:bg-sky-100 rounded-xl text-sky-700 text-sm font-medium transition-colors"
                 >
                   <Mail size={16} />
-                  chovancak@gromanka.eu
+                  zdruzenie@gromanka.eu
                 </a>
                 <a
                   href="tel:+421917917384"
@@ -580,7 +580,7 @@ export default function HomePage() {
 
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <a
-                href="mailto:chovancak@gromanka.eu?subject=Prihláška za člena OZ Gromanka"
+                href="mailto:zdruzenie@gromanka.eu?subject=Prihláška za člena OZ Gromanka"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white text-blue-700 font-semibold rounded-xl hover:bg-sky-50 transition-all duration-200 hover:shadow-lg"
               >
                 <Mail size={18} />
@@ -635,7 +635,7 @@ export default function HomePage() {
                     </div>
                   </a>
                   <a
-                    href="mailto:chovancak@gromanka.eu"
+                    href="mailto:zdruzenie@gromanka.eu"
                     className="flex items-start gap-4 group"
                   >
                     <div className="w-10 h-10 bg-white/10 group-hover:bg-white/20 rounded-xl flex items-center justify-center flex-shrink-0 transition-colors">
@@ -643,7 +643,7 @@ export default function HomePage() {
                     </div>
                     <div>
                       <p className="font-semibold text-sm mb-0.5">Email</p>
-                      <p className="text-white/70 text-sm">chovancak@gromanka.eu</p>
+                      <p className="text-white/70 text-sm">zdruzenie@gromanka.eu</p>
                     </div>
                   </a>
                   <a
@@ -678,7 +678,7 @@ export default function HomePage() {
                       <Instagram className="w-5 h-5" />
                     </span>
                     <a
-                      href="mailto:chovancak@gromanka.eu"
+                      href="mailto:zdruzenie@gromanka.eu"
                       className="w-10 h-10 bg-white/10 hover:bg-sky-500 rounded-xl flex items-center justify-center transition-all duration-200"
                       aria-label="Email"
                     >
@@ -697,7 +697,7 @@ export default function HomePage() {
                     e.preventDefault()
                     const form = e.target as HTMLFormElement
                     const data = new FormData(form)
-                    window.location.href = `mailto:chovancak@gromanka.eu?subject=${encodeURIComponent(data.get('subject') as string || 'Správa z webu')}&body=${encodeURIComponent(`Meno: ${data.get('name')}\nEmail: ${data.get('email')}\n\n${data.get('message')}`)}`
+                    window.location.href = `mailto:zdruzenie@gromanka.eu?subject=${encodeURIComponent(data.get('subject') as string || 'Správa z webu')}&body=${encodeURIComponent(`Meno: ${data.get('name')}\nEmail: ${data.get('email')}\n\n${data.get('message')}`)}`
                   }}
                 >
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -835,11 +835,11 @@ export default function HomePage() {
               <h3 className="font-semibold text-sm uppercase tracking-wider text-white/50 mb-4">Kontakt</h3>
               <div className="space-y-3">
                 <a
-                  href="mailto:chovancak@gromanka.eu"
+                  href="mailto:zdruzenie@gromanka.eu"
                   className="flex items-center gap-2 text-white/60 hover:text-sky-400 text-sm transition-colors"
                 >
                   <Mail size={14} />
-                  chovancak@gromanka.eu
+                  zdruzenie@gromanka.eu
                 </a>
                 <a
                   href="tel:+421917917384"
@@ -865,7 +865,7 @@ export default function HomePage() {
                   <Instagram className="w-4 h-4" />
                 </span>
                 <a
-                  href="mailto:chovancak@gromanka.eu"
+                  href="mailto:zdruzenie@gromanka.eu"
                   className="w-9 h-9 bg-white/10 hover:bg-sky-500 rounded-lg flex items-center justify-center transition-all duration-200"
                   aria-label="Email"
                 >

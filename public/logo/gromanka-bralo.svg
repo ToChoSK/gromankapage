@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-labelledby="gromanka-bralo-title">
+  <title id="gromanka-bralo-title">O.Z. Gromanka</title>
+  <path d="M2 56 L20 30 L27 39 L41 13 L62 56 Z" fill="#0369a1"/>
+  <path d="M20 30 L27 39 L27 56 L17 56 Z" fill="#38bdf8"/>
+  <path d="M41 13 L62 56 L37 56 Z" fill="#38bdf8"/>
+  <path d="M39.4 2 h3.2 v13 h-3.2 Z" fill="#fbbf24"/>
+  <path d="M35.5 5.8 h11 v3.2 h-11 Z" fill="#fbbf24"/>
+</svg>

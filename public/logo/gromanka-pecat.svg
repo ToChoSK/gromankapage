@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-labelledby="gromanka-pecat-title">
+  <title id="gromanka-pecat-title">O.Z. Gromanka</title>
+  <clipPath id="gromanka-pecat-clip">
+    <circle cx="32" cy="32" r="32"/>
+  </clipPath>
+  <circle cx="32" cy="32" r="32" fill="#0c4a6e"/>
+  <g clip-path="url(#gromanka-pecat-clip)">
+    <path d="M-2 52 L15 32 L22 39 L36 18 L66 52 Z" fill="#7dd3fc"/>
+    <path d="M-2 64 L-2 54 L2 47 L6 54 L10 46 L14 54 L18 48 L22 54 L26 45 L30 54 L34 47 L38 54 L42 46 L46 54 L50 48 L54 54 L58 46 L62 54 L66 48 L66 64 Z" fill="#38bdf8"/>
+    <path d="M34.4 6 h3.2 v14 h-3.2 Z" fill="#fbbf24"/>
+    <path d="M30.5 10 h11 v3.2 h-11 Z" fill="#fbbf24"/>
+  </g>
+</svg>

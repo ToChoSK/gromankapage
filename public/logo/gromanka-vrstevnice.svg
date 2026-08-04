@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-labelledby="gromanka-vrstevnice-title">
+  <title id="gromanka-vrstevnice-title">O.Z. Gromanka</title>
+  <g fill="none" stroke-width="3.4">
+    <ellipse cx="32" cy="33.5" rx="26" ry="18.5" transform="rotate(-18 32 33.5)" stroke="#7dd3fc"/>
+    <ellipse cx="34.5" cy="31.6" rx="18" ry="12.6" transform="rotate(-18 34.5 31.6)" stroke="#38bdf8"/>
+    <ellipse cx="36.5" cy="30" rx="10.5" ry="7.2" transform="rotate(-18 36.5 30)" stroke="#0ea5e9"/>
+  </g>
+  <ellipse cx="38" cy="28.8" rx="4.2" ry="3" transform="rotate(-18 38 28.8)" fill="#0369a1"/>
+</svg>

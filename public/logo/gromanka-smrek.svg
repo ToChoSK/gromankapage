@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-labelledby="gromanka-smrek-title">
+  <title id="gromanka-smrek-title">O.Z. Gromanka</title>
+  <mask id="gromanka-smrek-mask">
+    <rect width="64" height="64" fill="#fff"/>
+    <path d="M22 30 L18 38 L26 38 Z" fill="#000"/>
+    <path d="M22 35 L15.5 45 L28.5 45 Z" fill="#000"/>
+    <path d="M22 40.5 L13 51 L31 51 Z" fill="#000"/>
+    <path d="M20.3 49 h3.4 v4.5 h-3.4 Z" fill="#000"/>
+  </mask>
+  <path d="M3 56 L24 22 L36 37 L47 26 L61 56 Z" fill="#0369a1" mask="url(#gromanka-smrek-mask)"/>
+</svg>
